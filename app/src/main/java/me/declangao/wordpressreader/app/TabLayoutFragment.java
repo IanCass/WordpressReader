@@ -164,7 +164,7 @@ public class TabLayoutFragment extends Fragment implements SearchView.OnQueryTex
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError volleyError) {
-                        Log.d(TAG, "----- Volley Error -----");
+                        Log.e(TAG, "----- Volley Error -----", volleyError);
                         mProgressDialog.dismiss();
                         // Show an INDEFINITE Snackbar. New in design support lib v22.2.1.
                         Snackbar.make(mTabLayout, R.string.error_load_categories,
